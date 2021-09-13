@@ -12,8 +12,16 @@ const Tab = createBottomTabNavigator();
 export default function BottomTabDashboard() {
   return (
     <Tab.Navigator
-      screenOptions={{header: () => null}}
-      tabBarOptions={{showLabel: false}}>
+      screenOptions={{
+        header: () => null,
+        tabBarShowLabel: false,
+        tabBarStyle: [
+          {
+            display: 'flex',
+          },
+          null,
+        ],
+      }}>
       <Tab.Screen
         name="Dashboard"
         component={DashboardScreen}
